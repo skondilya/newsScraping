@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="app.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
       body { background-color: black; }
       #wrapper {
         width: 960px;
-        margin-left: auto;
-        margin-right: auto;
         padding-top: 5%;
       }
       #articles {
-        display: inline-block;
         background-color :blue;
         color: white;
         height: 700px;
@@ -32,6 +34,10 @@
         height: 200px;
         font-size: 18px;
       }
+      button{
+        background-color: green;
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -45,7 +51,8 @@
           <ul class="nav navbar-nav">
             <li><a href="/index">Home</a></li>
             <li><a href="/saved">Saved Articles</a></li>
-            <li data-target="#resultsModal"><a href="/index">SCRAPE NEW ARTICLES!</a></li>
+            <li><a data-target="#resultsModal"><button type="button" class="btn btn-lg btn-default scrape"><span>SCRAPE NEW ARTICLES!</span></button></a></li>
+
           </ul>
         </div>
       </nav>
@@ -61,7 +68,8 @@
     </div>
     </div>
 
-
+<div id="resultsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -75,8 +83,7 @@
 
   </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="app.js"></script>
+ 
   </body>
 </html>
 
