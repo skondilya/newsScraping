@@ -14,6 +14,30 @@ $.getJSON("/articles", function(data) {
 
 // Whenever someone clicks a p tag
 $(document).on("click", "#saved", function() {
+   // Grab the id associated with the article from the submit button
+  var thisId = $(this).attr("data-id");
+
+  // Run a POST request to change the note, using what's entered in the inputs
+  $.ajax({
+    method: "POST",
+    url: "/saved",
+    data: {
+      // Value taken from title input
+      title: title,
+      // Value taken from note textarea
+      link: link
+    }
+  })
+    // With that done
+    .done(function(data) {
+      // Log the response
+      console.log(data);
+    });
+});
+
+
+// Whenever someone clicks a p tag
+$(document).on("click", "#addnotes", function() {
   // Empty the notes from the note section
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
