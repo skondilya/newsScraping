@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+      body { background-color: black; }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      #articles {
+        display: inline-block;
+        background-color :blue;
+        color: white;
+        height: 700px;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: white;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="jumbotron">       
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/save">Saved Articles</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/save">Saved Articles</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="wrapper">
+        <h1>Saved Articles</h1>
+        <h2><i>Your saved articles</i></h2>
+          <div class="panel-body" id="articles" data-target="#resultsModal">
+          </div>
+      </div>
+
+      <div id="notes"></div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><strong>Sending Location in <Span id="time"></Span> seconds....</strong></h4>
+      </div>
+      <div class="modal-body">
+        <p id="name">Click the button below to stop</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="stopMail" data-dismiss="modal">Stop</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
