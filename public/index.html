@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <style>
-      body { background-color: #F2F6D0 }
+      body { background-color: black; }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -13,18 +15,14 @@
       }
       #articles {
         display: inline-block;
-        overflow: auto;
-        width: 60%;
+        background-color :blue;
+        color: white;
         height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
       }
       textarea, input {
         display: block;
         width: 100%;
-        background-color: #FCF5C7;
+        background-color: white;
       }
       input {
         height: 36px;
@@ -37,11 +35,30 @@
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
+    <div class="container">
+    <div class="jumbotron">       
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/main">Mongo Scraper</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/about">Home</a></li>
+            <li><a href="/contact">Saved Articles</a></li>
+            <li><a href="/timer">SCRAPE NEW ARTICLES!</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="wrapper">
+        <h1>Mongo Scraper</h1>
+        <h2><i>New York Times Edition</i></h2>
+          <div class="panel-body" id="articles">
+          </div>
+      </div>
+
       <div id="notes"></div>
+      </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="app.js"></script>
